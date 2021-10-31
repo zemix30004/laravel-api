@@ -135,6 +135,7 @@ return [
     */
 
     'providers' => [
+        Laravel\Sanctum\SanctumServiceProvider::class,
 
         /*
          * Laravel Framework Service Providers...
