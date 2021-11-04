@@ -19,7 +19,7 @@
         <td>{{ $data->name }}</td>
         <td>{{ $data->description }}</td>
         {{-- <td>{{ $data->file }}</td> --}}
-        <td><a href="">View</a></td>
+        <td><a href="{{ url('/viewfile', $data->id) }}">View</a></td>
         <td><a href="{{ url('/download', $data->file) }}">Download</a></td>
     </tr>
 

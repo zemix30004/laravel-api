@@ -45,4 +45,10 @@ class PageController extends Controller
     {
         return response()->download(public_path('assets/' . $file));
     }
+
+    public function viewFile($id)
+    {
+        $data = File::find($id);
+        return view('viewfile', compact('data'));
+    }
 }
