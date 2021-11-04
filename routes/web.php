@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\StaticController;
 
 
 /*
@@ -14,8 +16,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', [PageController::class, 'index']);
+Route::get('/uploadpage', [PageController::class, 'uploadPage']);
+Route::post('/uploadfile', [PageController::class, 'store']);
+Route::get('/showfile', [PageController::class, 'show']);
+Route::get('/download{file}', [PageController::class, 'downloadFile']);
+// Route::get('/', [StaticController::class, 'index']);
+// Route::get('/blog/{url}', [StaticController::class, 'blogPost'])->name('postShow');
 
 // Route::get('/{any}', 'SpaController@index')->where('any', '.*');
