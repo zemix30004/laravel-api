@@ -51,4 +51,9 @@ class PageController extends Controller
         $data = File::find($id);
         return view('viewfile', compact('data'));
     }
+
+    public function countWords()
+    {
+        return view('countWords');
+    }
 }

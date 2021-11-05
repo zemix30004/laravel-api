@@ -26,6 +26,7 @@ Route::post('/uploadfile', [PageController::class, 'store']);
 Route::get('/showfile', [PageController::class, 'show']);
 Route::get('/download/{file}', [PageController::class, 'downloadFile']);
 Route::get('/viewfile/{id}', [PageController::class, 'viewFile']);
+Route::get('/countwords', [PageController::class, 'countWords']);
 // Route::get('/', [StaticController::class, 'index']);
 // Route::get('/blog/{url}', [StaticController::class, 'blogPost'])->name('postShow');
 
